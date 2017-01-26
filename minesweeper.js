@@ -22,7 +22,6 @@ function fillBoard (board, rows, cols) {
       board.cells.push(newCell)
     }
   }
-
   return board
 }
 
@@ -35,11 +34,32 @@ function startGame () {
   for (var i = 0; i < board.cells.length; i++) {
     board.cells[i].surroundingMines = countSurroundingMines(board.cells[i]);
   }
-  document.getElementsByClassName('board')[0].addEventListener("click", checkForWin);
-  document.getElementsByClassName('board')[0].addEventListener("contextmenu", checkForWin);
+  reloadAndDrawBoard()
+}
+
+function reloadAndDrawBoard () {
+  var domBoard = document.getElementsByClassName('board')[0]
+  while (domBoard.firstChild) {
+      domBoard.removeChild(domBoard.firstChild);
+  }
+  domBoard.addEventListener("click", checkForWin);
+  domBoard.addEventListener("contextmenu", checkForWin);
+  document.getElementById("button").addEventListener("click", hideBoard);
+
   // Don't remove this function call: it makes the game work!
   lib.initBoard()
 }
+
+function hideBoard () {
+  displayMessage("Let\'s play!")
+  for (var i = 0; i < board.cells.length; i++) {
+    board.cells[i].hidden = true;
+    board.cells[i].isMarked = false;
+    board.cells[i].isProcessed = false;
+  }
+  reloadAndDrawBoard()
+}
+
 
 // Define this function to look for a win condition:
 //
@@ -74,9 +94,7 @@ function countSurroundingMines (cell) {
   for (var i = 0; i < surroundingCells.length; i++) {
     if (surroundingCells[i].isMine === true) {
       count = count + 1;
-      console.log(count);
     }
-    console.log(count)
   }
   return count
 }
