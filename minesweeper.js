@@ -81,7 +81,7 @@ function checkForWin () {
   }
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
-  lib.displayMessage('You win!')
+  lib.displayMessage('You survived!')
 }
 
 // Define this function to count the number of mines around the cell
