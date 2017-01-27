@@ -18,7 +18,7 @@ body {
 
 #message {
   font-size: 1.5rem;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Special Elite', cursive;
 }
 
 .board {
@@ -72,5 +72,5 @@ div.marked, div.marked:hover {
 }
 
 h3 {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Special Elite', cursive; 
 }
