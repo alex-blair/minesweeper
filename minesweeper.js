@@ -16,6 +16,7 @@ function numberedCell (rowNum, colNum) {
 }
 
 function fillBoard (board, rows, cols) {
+  board.cells = []
   for (var i = 0; i < rows; i++) {
     for (var j = 0; j < cols; j++) {
       var newCell = numberedCell(i,j)
@@ -44,11 +45,14 @@ function reloadAndDrawBoard () {
   }
   domBoard.addEventListener("click", checkForWin);
   domBoard.addEventListener("contextmenu", checkForWin);
-  document.getElementById("button").addEventListener("click", hideBoard);
+  document.getElementById("reset").addEventListener("click", hideBoard);
+  document.getElementById("newgame").addEventListener("click", startGame)
 
   // Don't remove this function call: it makes the game work!
   lib.initBoard()
 }
+
+
 
 function hideBoard () {
   displayMessage("Let\'s play!")
