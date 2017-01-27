@@ -1,5 +1,4 @@
 html, body {
-  height: 100%;
   font-family: 'Open Sans', sans-serif
 }
 
@@ -61,16 +60,22 @@ div.marked, div.marked:hover {
 }
 
 #reset {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-right: 10px;
   display: inline-block;
 }
 
 #newgame {
-  margin-top: 50px;
+  margin-top: 30px;
   display: inline-block;
 }
 
-h3 {
-  font-family: 'Special Elite', cursive; 
+h3, h4 {
+  font-family: 'Special Elite', cursive;
+}
+
+#instructions {
+  margin-top: 10px;
+  display: inline-block;
+  
 }
