@@ -55,7 +55,7 @@ function reloadAndDrawBoard () {
 
 
 function hideBoard () {
-  displayMessage("Let\'s play!")
+  displayMessage("Bury all the zombunnies")
   for (var i = 0; i < board.cells.length; i++) {
     board.cells[i].hidden = true;
     board.cells[i].isMarked = false;
