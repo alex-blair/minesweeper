@@ -1,6 +1,6 @@
 # Minesweeper
 
-This challenge has you create a clone of the desktop game Minesweeper:
+This is a project from Phase 0 of Enspiral Dev Academy's 18-week bootcamp. We had to create a clone of the desktop game Minesweeper:
 
 ![Old-school Minesweeper](minesweeper.jpg)
 
